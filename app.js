@@ -8,6 +8,7 @@ app.use(express.json());
 let db = null;
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+//initalizing database and server
 
 const initializeDbAndServer = async () => {
   try {
@@ -108,7 +109,6 @@ app.get("/user/tweets/feed", authenticateToken, async (request, response) => {
     console.log(`Error: ${error.message}`);
   }
 });
-
 
 app.get("/user/following/", authenticateToken, async (request, response) => {
   const username = request.username;
