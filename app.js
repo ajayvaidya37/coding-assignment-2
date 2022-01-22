@@ -24,7 +24,7 @@ const initializeDbAndServer = async () => {
   }
 };
 initializeDbAndServer();
-
+//authenticate token
 const authenticateToken = (request, response, next) => {
   let jwtToken;
   const authHeader = request.headers["authorization"];
